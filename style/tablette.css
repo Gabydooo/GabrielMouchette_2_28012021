@@ -8,7 +8,6 @@ a{
 header{
     display:flex;
     justify-content: space-between;
-    padding: 0 10em 0 10em;
 }
 #logo{
     
@@ -35,11 +34,8 @@ header{
 }
 #signIn{
     font-weight: bold;
-    margin:2em 3em 2em 0rem ;
+    margin:2em 0em 2em 0rem ;
     color: #0065FC;
-}
-main{
-    padding:0em 10em 2em 10em;
 }
 h1{
     font-size: xx-large;
@@ -63,14 +59,6 @@ h1{
 }
 input{
     border:0px;
-    font-family: 'Raleway';
-    font-weight: bold;
-    font-size: 15px;
-}
-input:focus{
-    font-family: 'Raleway';
-    font-weight: bold;
-    font-size: 15px;
 }
 #searchSubmit{
     border:0px;
@@ -82,9 +70,6 @@ input:focus{
     padding:0 1em 0 1em;
     border-radius: 0 1em 1em 0;
     
-}
-#searchSubmit:hover{
-    cursor: pointer;
 }
 #filters{
     display:flex;
@@ -199,7 +184,6 @@ input:focus{
 }
 .hebergementPopulaire{
     display: flex;
-    height: 10em;
     background-color: white;
     border-radius: 2em;
     margin:0 0em 2em 0;
@@ -219,19 +203,10 @@ input:focus{
     object-fit:cover;
     border-radius: 1.5em 0em 0 1.5em;
 }
-.separateur{
-    height: 33%;
-}
 #afficherPlus{
     font-family: 'Raleway';
     font-weight: bold;
     margin-bottom: 1.5em;
-}
-.etoile{
-    color:#0065FC 
-}
-.etoile[data-active=false]{
-    color: #f2f2f2;
 }
 #activites{
     margin-top: 2em;
@@ -240,23 +215,27 @@ input:focus{
     display: grid;
     align-items: center;
     grid-template-columns:repeat(4, 1fr);
-    /* grid-template-rows:15em 2em 2em 2em 15em; */
+    grid-template-rows:15em 2em 2em 2em 15em;
+    
+    
 }
 .activite{
     margin: 1em 2em 1em 0;
+    display: flex;
+    flex-flow: column;
     /* max-width: 1fr; */
     max-height: 100%;
-    object-fit: cover;
+    object-fit: scale-down;
     /* border-radius: 2em; */
     /* box-shadow:0 0 15px #ffff ; */
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .activiteImg{
-    overflow: hidden;
+    /* overflow: hidden; */
     /* width: 100%; */
     /* max-height: 100%; */
     /* max-width: 100%; */
-    object-fit:scale-down;
+    object-fit:cover;
     border-radius: 1.5em 1.5em 0 0;
 }
 .activite1{
@@ -288,7 +267,7 @@ footer{
     color: black;
     background-color: #f2f2f2;
     margin-top: 4em ;
-    padding:0 20em 4em 0em;
+    padding:0 20em 4em 4em;
     display: flex;
     justify-content: space-around;
 
@@ -296,14 +275,4 @@ footer{
 .footerColumn{
     display: flex;
     flex-flow: column;
-    justify-content:space-between;
-}
-a{
-    color: #525252;
-}
-a:hover{
-    text-decoration: underline;
-}
-h4{
-    margin-bottom: 1em;
 }
