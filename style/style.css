@@ -8,7 +8,7 @@ a{
 header{
     display:flex;
     justify-content: space-between;
-    padding: 0 10em 0 10em;
+    padding: 0 2em 0 2em;
 }
 #logo{
     
@@ -39,7 +39,7 @@ header{
     color: #0065FC;
 }
 main{
-    padding:0em 10em 2em 10em;
+    padding:0em 2em 2em 2em;
 }
 h1{
     font-size: xx-large;
@@ -182,7 +182,7 @@ input:focus{
     margin-top: 2em;
     border-radius: 2em;
     padding: 0 2em 0 2em;
-    width: 30em;
+    /* width: 30em; */
 }
 #titrePopulaires{
     display: flex;
@@ -220,7 +220,7 @@ input:focus{
     border-radius: 1.5em 0em 0 1.5em;
 }
 .separateur{
-    height: 33%;
+    /* height: 33%; */
 }
 #afficherPlus{
     font-family: 'Raleway';
@@ -306,4 +306,29 @@ a:hover{
 }
 h4{
     margin-bottom: 1em;
+}
+@media screen and (max-width: 1280px)
+{
+    main{
+        padding: 0 2em 0 2em;
+    }
+    #filters{
+        flex-wrap: wrap;
+    }
+    #hebergements{
+        flex-direction: column-reverse;
+    }
+    #populaires{
+        max-width: 100%;
+        /* width:100%; */
+        /* margin-right: 40em; */
+    }
+    #articlesPopulaires{
+        flex-direction: row;
+    }
+    #classiques{
+        max-width: 100%;
+        width:100%;
+        margin-right: 2em;
+    }
 }
