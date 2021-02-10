@@ -4,6 +4,10 @@ body{
 }
 a{
     text-decoration: none;
+    color: #525252;
+}
+a:hover{
+    text-decoration: underline;
 }
 header{
     display:flex;
@@ -28,6 +32,7 @@ header{
 .navLink:hover{
     color:#0065FC;
     border-top:3px solid #0065FC; 
+    text-decoration: none;
 }
 .navLink[data-active=true]{
     color:#0065FC;
@@ -219,6 +224,9 @@ input:focus{
     object-fit:cover;
     border-radius: 1.5em 0em 0 1.5em;
 }
+.infoPopulaire{
+    margin-left: 1em;
+}
 .separateur{
     /* height: 33%; */
 }
@@ -234,55 +242,64 @@ input:focus{
     color: #f2f2f2;
 }
 #activites{
+    padding: 0em 0em 2em 0em;
     margin-top: 2em;
+    max-width: 100%;
+    width: 100%;
 }
-#grilleActivites{
-    display: grid;
-    align-items: center;
-    grid-template-columns:repeat(4, 1fr);
-    /* grid-template-rows:15em 2em 2em 2em 15em; */
+#titreActivites{
+    margin-bottom: 5em;
+}
+#tableauActivites{
+    margin-left: 2em;
+    width: 100%;
+    max-width: 100%;
+    display: flex; 
+    justify-content:center;
+    height: 100%;
+}
+.columnActivite{
+    display:flex ;
+    height: 100%;
 }
 .activite{
-    margin: 1em 2em 1em 0;
-    /* max-width: 1fr; */
-    max-height: 100%;
-    object-fit: cover;
-    /* border-radius: 2em; */
-    /* box-shadow:0 0 15px #ffff ; */
-    overflow: hidden;
+    border-radius: 2em;
+    height: 100%;
+    margin:0 2em 2em 0;
+    /* padding-bottom: 1em; */
+    box-shadow:0 0 20px #0000002e;;
+    transition: 0.4s ease;
+}
+.activite:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.grandeActivite{
+    height: 100%;
+}
+.petiteActivite{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.grandeImgActivite{
+    border-radius: 2em 2em 0 0 ;
+    height: 32em ;
+}
+.moyenneImgActivite{
+    border-radius: 2em 2em 0 0 ;
+    height: 15em;
+}
+.petiteImgActivite{
+    border-radius: 2em 2em 0 0 ;
+    height: 11.1em;
 }
 .activiteImg{
-    overflow: hidden;
-    /* width: 100%; */
-    /* max-height: 100%; */
-    /* max-width: 100%; */
-    object-fit:scale-down;
-    border-radius: 1.5em 1.5em 0 0;
+    object-fit: cover;
+    width: 20em;
 }
-.activite1{
-    height: 30em;
-    grid-row: 1/6;
-    grid-column: 1/2;
-}
-.activite2{
-    grid-row: 1/4;
-    grid-column: 2/3;
-}
-.activite3{
-    grid-row: 5/6;
-    grid-column: 2/3;
-}
-.activite4{
-    grid-row: 1/6;
-    grid-column: 3/4;
-}
-.activite5{
-    grid-row: 1/2;
-    grid-column: 4/5;
-}
-.activite6{
-    grid-row: 3/6;
-    grid-column: 4/5;
+.infoActivite{
+    max-height: 100%;
 }
 footer{
     color: black;
@@ -298,18 +315,17 @@ footer{
     flex-flow: column;
     justify-content:space-between;
 }
-a{
-    color: #525252;
-}
-a:hover{
-    text-decoration: underline;
-}
+
 h4{
     margin-bottom: 1em;
 }
 @media screen and (max-width: 1280px)
 {
+    #signIn{
+        margin-right: 0;
+    }
     main{
+        max-width: 100%;
         padding: 0 2em 0 2em;
     }
     #filters{
@@ -320,15 +336,51 @@ h4{
     }
     #populaires{
         max-width: 100%;
-        /* width:100%; */
-        /* margin-right: 40em; */
+    }
+    #titrePopulaires{
+        margin-left: 1em;
     }
     #articlesPopulaires{
-        flex-direction: row;
+        flex-direction: column;
+    }
+    .hebergementPopulaire:hover{
+        transform: scale(1.03);
     }
     #classiques{
+        justify-content: center;
         max-width: 100%;
-        width:100%;
-        margin-right: 2em;
+        padding:0 2em 0 1.5em;
+        margin-right: 0;
+    }
+    #titreClassiques{
+        margin-left:1.5em;
+    }
+    #articlesClassiques{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* transform: scale(0.95); */
+    }
+
+    #afficherPlus{
+        margin-left: 1em;
+    }
+    #activites{
+        align-items:center ;
+    }
+    #tableauActivites{
+        flex-direction: column;
+        margin-left: 0;
+    }
+    #titreActivites{
+        margin-bottom: 2em;
+    }
+    footer{
+        margin-top: 2em;
+        padding:2em 0 2em 0;
+    }
+}
+@media screen and (max-width: 1280px){
+    body{
+        width: 100%;
     }
 }
