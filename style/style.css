@@ -40,8 +40,13 @@ header{
 }
 #signIn{
     font-weight: bold;
-    margin:2em 3em 2em 0rem ;
+    padding-top: 2em;
+    margin:0em 3em 0em 0rem ;
     color: #0065FC;
+}
+#signIn:hover{
+    text-decoration: none;
+    /* border-top:3px solid #0065FC; */
 }
 main{
     padding:0em 2em 2em 2em;
@@ -98,6 +103,9 @@ input:focus{
 }
 #filtersTitle{
     margin-right: 2em;
+}
+#filtersTab{
+    display: flex;
 }
 .filter{
     margin-right: 3.5em;
@@ -187,7 +195,6 @@ input:focus{
     margin-top: 2em;
     border-radius: 2em;
     padding: 0 2em 0 2em;
-    /* width: 30em; */
 }
 #titrePopulaires{
     display: flex;
@@ -266,8 +273,8 @@ input:focus{
     border-radius: 2em;
     height: 100%;
     margin:0 2em 2em 0;
-    /* padding-bottom: 1em; */
-    box-shadow:0 0 20px #0000002e;;
+    
+    box-shadow:0 0 20px #0000002e;
     transition: 0.4s ease;
 }
 .activite:hover{
@@ -314,6 +321,7 @@ footer{
     display: flex;
     flex-flow: column;
     justify-content:space-between;
+    width: 30%;
 }
 
 h4{
@@ -329,7 +337,13 @@ h4{
         padding: 0 2em 0 2em;
     }
     #filters{
+        display: block;
+    }
+    #filtersTab{
         flex-wrap: wrap;
+    }
+    .filter{
+        margin-bottom: 1em;
     }
     #hebergements{
         flex-direction: column-reverse;
@@ -349,7 +363,7 @@ h4{
     #classiques{
         justify-content: center;
         max-width: 100%;
-        padding:0 2em 0 1.5em;
+        padding:0 0em 0 1.5em;
         margin-right: 0;
     }
     #titreClassiques{
@@ -358,9 +372,10 @@ h4{
     #articlesClassiques{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        /* transform: scale(0.95); */
     }
-
+    .hebergementClassique{
+        width: fit-content;
+    }
     #afficherPlus{
         margin-left: 1em;
     }
@@ -371,6 +386,12 @@ h4{
         flex-direction: column;
         margin-left: 0;
     }
+    .columnActivite{
+        width: fit-content;
+    }
+    .activite{
+        width: fit-content;
+    }
     #titreActivites{
         margin-bottom: 2em;
     }
@@ -379,8 +400,61 @@ h4{
         padding:2em 0 2em 0;
     }
 }
-@media screen and (max-width: 1280px){
+@media screen and (max-width: 800px){
     body{
+        margin:0;
+    }
+    main{
+        padding: 0;
+    }
+    .filter{
+        transform: scale(0.9);
+        margin-right:0;
+        margin-bottom: 0.2em;
+    }
+    #result{
+        align-items: center;
+    }
+    #result .resultIcon{
+        margin-right: 0.5em;
+        transform: scale(0.8);
+        padding: 0em 1em 0em 1em;
+        height: 2.5em;
+    }
+    #populaires{
+        margin-top: 0em;
+        padding:0 0.5em 0 0.5em;
+    }
+    #classiques{
+        background-color: white;
+        padding-left: 0;
+    }
+    #articlesClassiques{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+    }
+    .hebergementClassique{
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+        box-shadow:0 0 20px #0000002e;
+    }
+    .columnActivite{
+        flex-flow: column;
+    }
+    .activite{
+        margin: 0 0.5em 0 0.5em;
+    }
+    .activiteImg{
+        width:100%;
+        height: 10em;
+    }
+    footer{
+        flex-flow: column;
+    }
+    .footerColumn{
+        padding-left: 2em;
         width: 100%;
+        text-align: left;
     }
 }
