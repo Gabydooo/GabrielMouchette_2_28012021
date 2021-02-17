@@ -4,10 +4,18 @@ body{
 }
 a{
     text-decoration: none;
-    color: #525252;
+    color: black;
+}
+a:visited{
+    color: black;
 }
 a:hover{
     text-decoration: underline;
+}
+h1{
+    font-size: xx-large;
+    font-weight: bolder;
+    margin-bottom: 0.5rem;
 }
 header{
     display:flex;
@@ -55,12 +63,6 @@ nav{
 main{
     padding:0em 2em 2em 2em;
 }
-h1{
-    font-size: xx-large;
-    font-weight: bolder;
-    margin-bottom: 0.5rem;
-}
-
 #subTitle{
     margin-top: 0em;
 }
@@ -242,9 +244,6 @@ input:focus{
 .infoPopulaire{
     margin-left: 1em;
 }
-.separateur{
-    /* height: 33%; */
-}
 #afficherPlus{
     color: black;
     font-family: 'Raleway';
@@ -265,6 +264,7 @@ input:focus{
 }
 #titreActivites{
     margin-bottom: 5em;
+    margin-left: 4em;
 }
 #tableauActivites{
     margin-left: 2em;
@@ -357,6 +357,9 @@ h4{
     .hebergementClassique{
         width: fit-content;
     }
+    #titreActivites{
+        margin-left: 2em;
+    }
     h3{
         display: flex;
         flex-wrap: wrap;
@@ -414,6 +417,9 @@ h4{
     }
     #afficherPlus{
         margin-left: 1em;
+    }
+    #titreActivites{
+        margin-left: 2em;
     }
     #activites{
         align-items:center ;
@@ -543,6 +549,9 @@ h4{
         margin-right: 0.5em;
         margin-left: 0.5em;
         box-shadow:0 0 20px #0000002e;
+    }
+    #titreActivites{
+        margin-left:1em;
     }
     .columnActivite{
         flex-flow: column;
