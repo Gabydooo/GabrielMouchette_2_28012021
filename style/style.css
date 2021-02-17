@@ -18,10 +18,14 @@ header{
     
     margin-top: 1em;
 }
-#nav{
-    padding: 2em 0 2em 0;
+#espaceur{
+    width: 100%;
+}
+#mobileMenu{
     display: flex;
-    justify-content:flex-start;
+}
+nav{
+    display: flex;
 }
 .navLink{
     padding: 2em 2em 2em 2em ;
@@ -56,6 +60,7 @@ h1{
     font-weight: bolder;
     margin-bottom: 0.5rem;
 }
+
 #subTitle{
     margin-top: 0em;
 }
@@ -155,6 +160,7 @@ input:focus{
 }
 #hebergements{
     display: flex;
+    justify-content: space-around;
 }
 #classiques{
     display: block;
@@ -240,6 +246,7 @@ input:focus{
     /* height: 33%; */
 }
 #afficherPlus{
+    color: black;
     font-family: 'Raleway';
     font-weight: bold;
     margin-bottom: 1.5em;
@@ -437,14 +444,50 @@ h4{
     body{
         margin: 0%;
     }
+    header{
+        flex-flow: wrap-reverse;
+        padding: 10px 8px 10px 8px;
+    }
+    nav{
+        width:100%
+    }
+    #mobileMenu{
+        width: 100%;
+        justify-content:space-around;
+        order: 3;
+    }
+    .mobileCat{
+        width: 100%;
+        border-top: 0px;
+        border-bottom: 3px solid #F2F2F2;
+        padding-bottom: 1em;
+    }
+    .mobileCat:hover{
+        border-top: 0px;
+    }
+    .mobileCat[data-active=true]{
+        border-top: 0px;
+        border-bottom: 3px solid #0065FC;
+    }
     main{
         padding: 0;
     }
+    #logo{
+        margin-left: 1em;
+        order:1;
+    }
+    #signIn{
+        order: 2;
+    } 
     h1{
         font-size:x-large;
     }
+    #titre{
+        margin:0 1em 0 1em;
+    }
+    
     #searchBar{
-        
+        margin-left: 1em;
         height:3em;
     }
     #search .searchIcon{
@@ -461,13 +504,19 @@ h4{
         background-color: #0065FC;
         border-radius: 1em 1em 1em 1em;
     }
+    #filtersTitle{
+        padding-left:1em ;
+    }
     .filter{
         transform: scale(0.9);
-        margin-right:0;
+        margin-left: 0.5em;
+        margin-right: 0;
         margin-bottom: 0.2em;
     }
     #result{
         align-items: center;
+        margin-left: 1em;
+        margin-right: 1em;
     }
     #result .resultIcon{
         margin-right: 0.5em;
@@ -478,6 +527,7 @@ h4{
     #populaires{
         margin-top: 0em;
         padding:0 0.5em 0 0.5em;
+        border-radius: 1em;
     }
    
     #classiques{
@@ -525,3 +575,4 @@ h4{
     .activite:hover{
         transform: none;
     }
+}
