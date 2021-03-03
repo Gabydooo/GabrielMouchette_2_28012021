@@ -120,7 +120,7 @@ input:focus{
 }
 .filter{
     margin-right: 3.5em;
-    padding-right: 2em;
+    padding-right: 1.5em;
     display: flex;
     border: 3px solid #f2f2f2 ;
     border-radius: 2em;
@@ -219,7 +219,7 @@ input:focus{
 }
 .hebergementPopulaire{
     display: flex;
-    height: 10em;
+    /* height: 10em; */
     background-color: white;
     border-radius: 2em;
     margin:0 0em 2em 0;
@@ -233,13 +233,21 @@ input:focus{
 .populaireImg{
     height:10em;
     width:10em;
+    min-width: 10em;
     object-fit:cover;
     border-radius: 1.5em 0em 0 1.5em;
 }
 .infoPopulaire{
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     margin-left: 1em;
+}
+.nomPop{
+    margin-bottom: 0px;
+}
+.prixPop{
+    margin-top: 0.5em;
 }
 #afficherPlus{
     color: black;
@@ -263,6 +271,7 @@ input:focus{
     margin-left: 4em;
 }
 #tableauActivites{
+    padding-right: 2em;
     margin-left: 2em;
     width: 100%;
     display: flex; 
@@ -289,11 +298,13 @@ input:focus{
 }
 .grandeActivite{
     height: 100%;
+    width:100%
 }
 .petiteActivite{
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100%;
 }
 .grandeImgActivite{
     border-radius: 2em 2em 0 0 ;
@@ -497,10 +508,14 @@ footer{
     }
     #titre{
         margin:0 1em 0 1em;
-    }  
+    }
+    
     #searchBar{
-        margin-left: 1em;
         height:3em;
+        justify-content: center;
+    }
+    input{
+        width: 65%;
     }
     #search .searchIcon{
         padding: 0 1em 0 1em;
@@ -521,8 +536,8 @@ footer{
     }
     .filter{
         transform: scale(0.9);
-        margin-left: 0.5em;
-        margin-right: 0;
+        margin-left: 0em;
+        margin-right: 0px;
         margin-bottom: 0.2em;
     }
     #result{
@@ -540,6 +555,14 @@ footer{
         margin-top: 0em;
         padding:0 0.5em 0 0.5em;
         border-radius: 1em;
+    }
+    .populaireImg{
+        height: 8em;
+        min-width: 8em;
+        width: 6em;
+    }
+    .infoPopulaire{
+        font-size: small;
     }
     #classiques{
         background-color: white;
