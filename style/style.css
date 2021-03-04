@@ -535,10 +535,16 @@ footer{
         padding-left:1em ;
     }
     .filter{
-        transform: scale(0.9);
+        height: 3em;
         margin-left: 0em;
-        margin-right: 0px;
-        margin-bottom: 0.2em;
+        margin-right: 1em;
+        margin-bottom: 0.5em;
+        padding-right: 1em;
+    }
+    .filterIcon{
+        margin-right: 1em;
+        width: 3em;
+        height: 3em;
     }
     #result{
         align-items: center;
@@ -580,6 +586,9 @@ footer{
     }
     #titreActivites{
         margin-left:1em;
+    }
+    #tableauActivites{
+        padding-right: 0;
     }
     .columnActivite{
         flex-flow: column;
