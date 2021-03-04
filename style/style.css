@@ -534,6 +534,9 @@ footer{
     #filtersTitle{
         padding-left:1em ;
     }
+    #filtersTab{
+        padding-left:0.5em;
+    }
     .filter{
         height: 3em;
         margin-left: 0em;
